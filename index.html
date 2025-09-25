@@ -186,6 +186,15 @@
         font-size: 1em;
         flex: 1 1 auto;
         font-family: 'Inter', Arial, sans-serif;
+        text-align: justify;
+    }
+    #project .project-card h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 1.2em;
+        color: var(--maroon);
+        font-family: 'Playfair Display', serif;
+        text-align: center;
     }
     #project a {
         color: var(--maroon);
@@ -388,6 +397,7 @@
         }
         #project .project-list {
             grid-template-columns: 1fr;
+            
         }
         .resume-btn {
             margin-top: 12px;
@@ -540,24 +550,27 @@
             <h2>My Projects</h2>
             <div class="project-list">
                <div class="project-card">
-    <h3>Personal Portfolio Website</h3>
-    <p>
-        A responsive personal website to showcase my skills, education, and projects. 
-        Built with HTML, CSS, and JavaScript for smooth navigation and mobile compatibility.
-    </p>
-    <a href="https://personal-website-five-pi-72.vercel.app/" target="_blank">
-        View Project
-    </a>
-</div>
+            <img src="assets/personal.png" alt="Personal Information" style="width:100%; max-width:220px; border-radius:10px 10px 0 0; max-height:110px; object-fit:cover; margin: 0 auto 10px auto; display:block;">
+            <h3>My Personal Portfolio Website</h3>
+            <p>
+            A responsive personal website to showcase my skills, education, and projects. 
+            Built with HTML, CSS, and JavaScript for smooth navigation and mobile compatibility.
+             </p>
+            <a href="https://personal-website-five-pi-72.vercel.app/" target="_blank">
+            View Project
+            </a>
+            </div>
                 <div class="project-card">
-                    <h3>Task Manager App</h3>
-                    <p>A simple web application for managing daily tasks, featuring add, edit, and delete functionality. Developed using JavaScript and local storage for data persistence.</p>
-                    <a href="https://github.com/yourusername/task-manager" target="_blank">View Project</a>
+                    <img src="assets/beans.png" alt="Mr.Beans Coffee Co." style="width:100%; max-width:220px; border-radius:10px 10px 0 0; max-height:110px; object-fit:cover; margin: 0 auto 10px auto; display:block;">
+                    <h3>Mr.Beans Coffee Co.</h3>
+                    <p>This is one of the projects we worked on during our on-the-job training. It is one of the businesses handled by our company, and we were assigned to create a website for this coffee shop. The goal of the project was to design a functional and user-friendly website that highlights the shop’s products and services.</p>
+                    <a href="https://mrbeans.online/" target="_blank">View Project</a>
                 </div>
                 <div class="project-card">
-                    <h3>Weather Dashboard</h3>
-                    <p>A web dashboard that displays real-time weather information for any city using the OpenWeatherMap API. Includes search and responsive design for mobile devices.</p>
-                    <a href="https://github.com/yourusername/weather-dashboard" target="_blank">View Project</a>
+                    <img src="assets/pamcares.png" alt="Mr.Beans Coffee Co." style="width:100%; max-width:220px; border-radius:10px 10px 0 0; max-height:110px; object-fit:cover; margin: 0 auto 10px auto; display:block;">
+                    <h3>PAMCARES</h3>
+                    <p>This is our capstone project, an appointment booking system for the Philippine Animal Medical Center. My role in this project was focused on front-end web design, where I worked on creating a clean, user-friendly interface to make the booking process simple and efficient.</p>
+                    <a href="https://pamcares.vercel.app/User/Pages/homepage.html" target="_blank">View Project</a>
                 </div>
             </div>
         </section>
@@ -640,6 +653,7 @@
 </body>
 
 </html>
+
 
 
 
