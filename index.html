@@ -1,124 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        /* Reset default margin/padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        body {
-            display: flex;
-            min-height: 100vh;
-            background: #f4f6f9;
-        }
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f4f6f9;
+      transition: margin-left 0.3s ease;
+    }
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background: #2c3e50;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            height: 100%;
-        }
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 22px;
-            color: #f1c40f;
-        }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 22px;
+      color: #f1c40f;
+    }
 
-        .sidebar a {
-            text-decoration: none;
-            color: #fff;
-            padding: 12px;
-            margin: 5px 0;
-            display: block;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px;
+      margin: 5px 0;
+      display: block;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-        .sidebar a:hover {
-            background: #34495e;
-        }
+    .sidebar a:hover {
+      background: #34495e;
+    }
 
-        /* Content */
-        .content {
-            margin-left: 260px;
-            margin-top: 50px;
-            padding: 20px;
-            flex: 1;
-        }
+    /* Content */
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      flex: 1;
+      transition: margin-left 0.3s ease;
+    }
 
-        section {
-            display: none;
-        }
+    section {
+      display: none;
+    }
 
-        section.active {
-            display: block;
-            animation: fadeIn 0.6s ease;
-        }
+    section.active {
+      display: block;
+      animation: fadeIn 0.6s ease;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-        /* Custom sections */
-        #home h1 {
-            font-size: 32px;
-            color: #2c3e50;
+    /* Hamburger Button */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      font-size: 22px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1100;
+    }
 
-        }
-
-        #projects ul {
-            list-style: square;
-            margin-left: 20px;
-        }
-
-        #contacts p {
-            margin: 10px 0;
-        }
-
-        /* Contact form */
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-        }
-
-        input, textarea {
-            margin-bottom: 12px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        button {
-            padding: 10px;
-            border: none;
-            background: #2c3e50;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #34495e;
-        }
-
-        /* Home Section Design */
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+      .sidebar.active {
+        transform: translateX(0);
+      }
+      .content {
+        margin-left: 0;
+        padding-top: 60px;
+      }
+      .content.shift {
+        margin-left: 250px; /* Content shifts when sidebar opens */
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    /* Home Section Design */
         .home-container {
             display: flex;
             align-items: center;
@@ -612,21 +605,26 @@
             font-size: 1em;
         }
     }
-    </style>
+
+
+  </style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>My Website</h2>
-        <a href="#" onclick="showSection('home')">HOME</a>
-        <a href="#" onclick="showSection('projects')">MY PROJECTS</a>
-        <a href="#" onclick="showSection('contacts')">CONTACTS</a>
-    </div>
+  <!-- Hamburger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-    <!-- Content -->
-    <div class="content">
-        <section id="home" class="active">
-            <div class="home-container">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>My Website</h2>
+    <a href="#" onclick="showSection('home')">HOME</a>
+    <a href="#" onclick="showSection('projects')">MY PROJECTS</a>
+    <a href="#" onclick="showSection('contacts')">CONTACTS</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content" id="content">
+    <section id="home" class="active">
+      <div class="home-container">
                 <div class="home-text">
                     <h1>Hello! I'm Jacquilyn Ligon. Welcome to my Personal Website.</h1>
                    <p>I am an aspiring IT professional with a strong foundation in web development, software testing, and information technology solutions. I am currently completing my Bachelor of Science in Information Technology at STI College Cubao.</p><br>
@@ -670,9 +668,10 @@
         </div>
     </div>
         </section>
+    </section>
 
-        <section id="projects">
-            <h1 style="font-size:2em; color:#2c3e50; margin-bottom:18px;">My Projects</h1>
+    <section id="projects">
+      <h1 style="font-size:2em; color:#2c3e50; margin-bottom:18px;">My Projects</h1>
             <div class="project-list">
                 <div class="project-card">
                     <img src="assets/personal.png" alt="Portfolio Website" style="width:100%; max-width:220px; border-radius:10px 10px 0 0; max-height:130px; object-fit:cover; margin: 0 auto 10px auto; display:block;">
@@ -710,10 +709,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <section id="contacts">
-            <h1>Contact Me</h1>
+    <section id="contacts">
+      <h1>Contact Me</h1>
             <p>If you'd like to get in touch, please fill out the form below:</p>
             <form onsubmit="sendMessage(event)">
                 <input type="text" placeholder="Your Name" required>
@@ -746,20 +745,30 @@
         </section>
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll("section").forEach(sec => {
-                sec.classList.remove("active");
-            });
-            // Show selected
-            document.getElementById(sectionId).classList.add("active");
-        }
 
-        function sendMessage(event) {
-            event.preventDefault();
-            alert("Message sent successfully!");
-        }
-    </script>
+  <script>
+  function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    // Show selected section
+    document.getElementById(sectionId).classList.add("active");
+
+    // Close sidebar if it's open (for mobile)
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+    if (window.innerWidth <= 768 && sidebar.classList.contains("active")) {
+      sidebar.classList.remove("active");
+      content.classList.remove("shift");
+    }
+  }
+
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+
+    sidebar.classList.toggle("active");
+    content.classList.toggle("shift");
+  }
+</script>
 </body>
 </html>
