@@ -342,36 +342,41 @@
             border-color: #ffe066;
         }
         @media (max-width: 900px) {
-            .project-list {
-                gap: 18px;
-            }
-            .project-card {
-                width: 98vw;
-                max-width: 400px;
-            }
-            .project-card img,
-            .project-img {
-                height: 110px;
-            }
+        .project-list {
+            gap: 18px;
+            flex-wrap: wrap; /* para hindi sumobra sa row */
+            justify-content: center;
         }
+        .project-card {
+            width: 100%;
+            max-width: 400px;
+        }
+        .project-card img,
+        .project-img {
+            height: 110px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        }
+
         @media (max-width: 700px) {
-            .project-list {
-                flex-direction: column;
-                gap: 18px;
-                align-items: center;
-            }
-            .project-card {
-                width: 98vw;
-                max-width: 98vw;
-            }
-            .project-card img,
-            .project-img {
-                height: 100px;
-                max-width: 90vw;
-            
-                
-            }
+        .project-list {
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
         }
+        .project-card {
+            width: 100%;
+            max-width: 100%;
+        }
+        .project-card img,
+        .project-img {
+            height: 100px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        }
+
 
         /* Contact section design */
         #contacts {
