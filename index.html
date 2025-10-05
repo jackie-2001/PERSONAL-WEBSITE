@@ -15,14 +15,14 @@
     body {
       display: flex;
       min-height: 100vh;
-      background: #f4f6f9;
+      background: #1d3557;
       transition: margin-left 0.3s ease;
     }
 
     /* Sidebar */
     .sidebar {
       width: 250px;
-      background: #2c3e50;
+      background: #101820 ;
       color: #fff;
       padding: 20px;
       display: flex;
@@ -37,7 +37,7 @@
       text-align: center;
       margin-bottom: 30px;
       font-size: 22px;
-      color: #f1c40f;
+      color: #F2AA4C;
     }
 
     .sidebar a {
@@ -117,7 +117,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 40px;
-            background: #fff;
+            background: #101820;
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(44,62,80,0.08);
             padding: 40px 32px;
@@ -126,21 +126,21 @@
 
         .home-text h1 {
             font-size: 36px;
-            color: #2c3e50;
+            color: #F2AA4C;
             margin-bottom: 18px;
             letter-spacing: 0.02em;
         }
 
         .home-text p {
             font-size: 18px;
-            color: #34495e;
+            color: #fdddb2;
             line-height: 1.7;
             text-align: justify;
         }
 
         .home-text .highlight {
             display: inline-block;
-            background: #f1c40f;
+            background: #F2AA4C;
             color: #2c3e50;
             padding: 2px 10px;
             border-radius: 8px;
@@ -150,19 +150,19 @@
 
         .home-image img {
             width: 220px;
-            height: 220px;
+            height: 320px;
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 2px 16px rgba(44,62,80,0.13);
-            border: 5px solid #f1c40f;
+            border: 5px solid #F2AA4C;
         }
         
         .resume-btn {
             display: inline-block;
             margin-top: 18px;
             padding: 12px 28px;
-            background: #f1c40f;
-            color: #2c3e50;
+            background: #F2AA4C ;
+            color: #101820;
             border-radius: 28px;
             font-size: 1.08em;
             font-weight: 600;
@@ -210,7 +210,7 @@
 
         .skills-list {
             margin: 32px 0 0 0;
-            background: #fffbea;
+            background: #101820 ;
             border-radius: 14px;
             box-shadow: 0 2px 8px rgba(44,62,80,0.07);
             padding: 24px 18px;
@@ -222,7 +222,7 @@
         .skills-list strong {
             display: block;
             font-size: 1.2em;
-            color: #2c3e50;
+            color: #fdddb2;
             margin-bottom: 10px;
             letter-spacing: 0.03em;
             text-align: center;
@@ -239,7 +239,7 @@
         .skill-category-title {
             display: inline-block;
             font-weight: 700;
-            color: #000000;
+            color: #fdddb2;
             margin-right: 10px;
             font-size: 1.08em;
             font-family: inherit;
@@ -249,13 +249,13 @@
         .skill-badge {
             display: inline-flex;
             align-items: center;
-            color: #2c3e50;
+            color: #fdddb2 ;
             border-radius: 16px;
             padding: 6px 18px;
             margin: 4px 8px 4px 0;
             font-size: 1em;
             font-weight: 500;
-            border: 1px solid #f1c40f;
+            border: 1px solid #F2AA4C;
             position: relative;
         }
     
@@ -323,8 +323,8 @@
         }
         .project-link {
             display: inline-block;
-            background: #f1c40f;
-            color: #2c3e50;
+            background: #1d3557;
+            color: #fdddb2;
             padding: 8px 18px;
             border-radius: 18px;
             font-weight: 600;
@@ -378,239 +378,227 @@
         }
 
 
-        /* Contact section design */
-        #contacts {
-            background: #fffbea;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(44,62,80,0.08);
-            padding: 32px 24px;
-            max-width: 800px;
-            margin: 32px auto;
-            border: 1.5px solid #f1c40f;
-        }
+        /* Contact Section Design */
+#contacts {
+  background: #2a3a52;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+  padding: 36px 32px;
+  max-width: 800px;
+  margin: 40px auto;
+  border: 2px solid #f2aa4c;
+  color: #f0e8d4;
+  user-select: none;
+}
 
-        #contacts h1 {
-            color: #2c3e50;
-            font-size: 2em;
-            margin-bottom: 12px;
-            text-align: center;
-            letter-spacing: 0.03em;
-        }
+#contacts h1 {
+  color: #f2aa4c;
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-        #contacts p {
-            color: #34495e;
-            font-size: 1em;
-            margin-bottom: 16px;
-            text-align: center;
-        }
+#contacts p {
+  color: #dcd3a1;
+  font-size: 1.1em;
+  margin-bottom: 22px;
+  text-align: center;
+  line-height: 1.5;
+}
 
-        #contacts form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 400px;
-            margin: 0 auto 18px auto;
-        }
+#contacts form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto 24px auto;
+}
 
-        #contacts input,
-        #contacts textarea {
-            padding: 10px 14px;
-            border: 1.5px solid #f1c40f;
-            border-radius: 8px;
-            font-size: 1em;
-            font-family: inherit;
-            background: #fff;
-            color: #2c3e50;
-            transition: border 0.2s;
-        }
+#contacts input,
+#contacts textarea {
+  padding: 14px 18px;
+  border: 2px solid #f2aa4c;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-family: inherit;
+  background: #fefefe;
+  color: #2a3a52;
+  transition: border-color 0.3s ease;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  resize: vertical;
+  user-select: text;
+}
 
-        #contacts input:focus,
-        #contacts textarea:focus {
-            border-color: #ffe066;
-            outline: none;
-        }
+#contacts input:focus,
+#contacts textarea:focus {
+  border-color: #ffe066;
+  outline: none;
+  box-shadow: 0 0 10px #ffe066aa;
+}
 
-        #contacts button {
-            padding: 12px 0;
-            background: #f1c40f;
-            color: #2c3e50;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.08em;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-            box-shadow: 0 1px 4px rgba(44,62,80,0.06);
-            margin-top: 8px;
-        }
+#contacts button {
+  padding: 14px 0;
+  background: #f2aa4c;
+  color: #2a3a52;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.15em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 6px 18px rgba(242, 170, 76, 0.4);
+  user-select: none;
+}
 
-        #contacts button:hover {
-            background: #ffe066;
-            color: #2c3e50;
-        }
+#contacts button:hover,
+#contacts button:focus {
+  background: #ffe066;
+  color: #2a3a52;
+  outline: none;
+}
 
-        #contacts p:last-of-type {
-            margin-top: 12px;
-            font-size: 1em;
-            color: #2c3e50;
-            text-align: center;
-            background: #fff;
-            border-radius: 8px;
-            padding: 8px 0;
-            box-shadow: 0 1px 4px rgba(44,62,80,0.04);
-        }
+#contacts p:last-of-type {
+  margin-top: 16px;
+  font-size: 1.05em;
+  color: #f0e8d4;
+  text-align: center;
+  background: #3b4a65;
+  border-radius: 12px;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(44, 62, 80, 0.1);
+}
 
-        #contact .contact-links {
-        margin-top: 18px;
-        font-size: 0.98em;
-        color: var(--maroon-dark);
-        font-family: 'Inter', Arial, sans-serif;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 18px;
-        align-items: center;
-        justify-content: center;
-    }
-    #contact .contact-links span {
-        flex-basis: 100%;
-        font-weight: 600;
-        color: var(--maroon);
-        margin-bottom: 4px;
-        font-size: 1em;
-        letter-spacing: 0.02em;
-    }
-    #contact .contact-links a {
-        display: inline-flex;
-        align-items: center;
-        margin: 0;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s, background 0.2s;
-        font-size: 0.98em;
-        color: var(--maroon);
-        background: #fff;
-        padding: 5px 14px;
-        border-radius: 18px;
-        border: 1.2px solid var(--maroon-light);
-        font-family: 'Inter', Arial, sans-serif;
-        box-shadow: 0 1px 3px rgba(128,0,0,0.04);
-        margin-bottom: 4px;
-    }
-    #contact .contact-links a:hover {
-        background: var(--maroon-light);
-        color: var(--white);
-        border-color: var(--maroon);
-        text-decoration: none;
-    }
-    #contact .contact-links svg {
-        margin-right: 6px;
-        vertical-align: middle;
-        width: 18px;
-        height: 18px;
-    }
-    @media (max-width: 600px) {
-        #contact .contact-links {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 6px 0;
-        }
-        #contact .contact-links a {
-            width: 100%;
-            justify-content: flex-start;
-            font-size: 1em;
-        }
-    }
+.contact-links {
+  margin-top: 24px;
+  font-size: 1em;
+  color: #f2aa4c;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
 
-        @media (max-width: 700px) {
-            #contacts {
-                padding: 18px 6vw;
-                max-width: 98vw;
-                margin: 18px auto;
-            }
-            #contacts form {
-                max-width: 98vw;
-                padding: 0;
-            }
-        }
+.contact-links span {
+  flex-basis: 100%;
+  font-weight: 700;
+  color: #f2aa4c;
+  margin-bottom: 8px;
+  font-size: 1.15em;
+  letter-spacing: 0.03em;
+  text-align: center;
+  user-select: none;
+}
 
-    .contact-links {
-    margin-top: 18px;
-    font-size: 0.98em;
-    color: #2c3e50;
-    font-family: 'Inter', Arial, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 18px;
-    align-items: center;
-    justify-content: center;
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fefefe;
+  padding: 8px 20px;
+  border-radius: 22px;
+  border: 2px solid #f2aa4c;
+  box-shadow: 0 3px 10px rgba(44, 62, 80, 0.1);
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #2a3a52;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.contact-item:hover,
+.contact-item:focus {
+  background: #ffe066;
+  color: #2a3a52;
+  border-color: #ffe066;
+  outline: none;
+  text-decoration: none;
+}
+
+.contact-item svg {
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s ease;
+}
+
+.contact-item:hover svg,
+.contact-item:focus svg {
+  fill: #2a3a52;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-105%);
+    width: 240px;
+    padding: 28px 20px;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+    box-shadow: 6px 0 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 70px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #f4f6f8;
+  }
+
+  .content.shift {
+    margin-left: 240px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  #contacts {
+    padding: 28px 6vw;
+    max-width: 98vw;
+    margin: 24px auto;
+  }
+  #contacts form {
+    max-width: 98vw;
+    padding: 0;
+  }
+  .contact-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px 0;
     width: 100%;
-    text-align: center;
-   }
-
-    .contact-links span {
-        flex-basis: 100%;
-        font-weight: 600;
-        color: #000000;
-        margin-bottom: 4px;
-        font-size: 1em;
-        letter-spacing: 0.02em;
-        text-align: center;
-    }
-
-    .contact-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 18px;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .contact-item {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        padding: 5px 14px;
-        border-radius: 18px;
-        border: 1.2px solid #f1c40f;
-        box-shadow: 0 1px 3px rgba(44,62,80,0.04);
-        margin-bottom: 4px;
-        font-weight: 500;
-        font-size: 0.98em;
-        color: #2c3e50;
-        text-decoration: none;
-        transition: color 0.2s, background 0.2s, border 0.2s;
-    }
-
-    .contact-item:hover {
-        background: #ffe066;
-        color: #2c3e50;
-        border-color: #ffe066;
-        text-decoration: none;
-    }
-
-    .contact-item svg {
-        margin-right: 6px;
-        vertical-align: middle;
-        width: 18px;
-        height: 18px;
-    }
-    
-    @media (max-width: 700px) {
-        .contact-row {
-            flex-direction: column;
-            align-items: center;
-            gap: 8px 0;
-            width: 100%;
-        }
-        .contact-item {
-            width: 100%;
-            justify-content: center;
-            font-size: 1em;
-        }
-    }
-
+  }
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1em;
+  }
+}
 
   </style>
 </head>
@@ -628,25 +616,36 @@
 
   <!-- Content -->
   <div class="content" id="content">
-    <section id="home" class="active">
-      <div class="home-container">
-                <div class="home-text">
-                    <h1>Hello! I'm Jacquilyn Ligon. Welcome to my Personal Website.</h1>
-                   <p>I am an aspiring IT professional with a strong foundation in web development, software testing, and information technology solutions. I am currently completing my Bachelor of Science in Information Technology at STI College Cubao.</p><br>
-            <p>This website serves as a portfolio to showcase my skills, academic background, and project experience. My goal is to contribute to the IT industry by developing efficient, user-friendly, and innovative solutions while continuously expanding my knowledge and expertise.</p><br>
-            <p>Feel free to explore the different sections of my website to learn more about me, my skills, and how to get in touch.<br><br>Thank you for visiting!</p>
-                <a 
-                 href="assets/JACQUILYN_LIGON_CV (2).pdf" 
-                download 
-                class="resume-btn desktop-resume-btn"
-            >
-                View My Resume
-            </a>
-        </div>
-                <div class="home-image">
-                    <img src="assets/me.jfif" alt="Profile" />
-                </div>
-            </div>
+  <section id="home" class="active">
+    <div class="landing-hero" style="text-align: center; margin-bottom: 48px; padding: 40px 20px; background: #f2aa4c; border-radius: 20px; box-shadow: 0 8px 32px rgba(242, 170, 76, 0.4); user-select: none;">
+      <h1 style="color: #2a3a52; font-size: 3.2em; font-weight: 900; margin-bottom: 14px; letter-spacing: 0.06em;">Welcome to Jacquilyn Ligon's World</h1>
+      <p style="color: #2a3a52dd; font-size: 1.35em; font-weight: 600; margin-bottom: 28px;">
+        Bridging Innovation and Technology to Build a Better Tomorrow
+      </p>
+      <a href="#projects" onclick="showSection('projects'); event.preventDefault();" style="font-size: 1.25em; font-weight: 700; padding: 14px 38px; background: #2a3a52; color: #f2aa4c; border-radius: 36px; text-decoration: none; box-shadow: 0 6px 20px rgba(42, 58, 82, 0.6); transition: background 0.3s, color 0.3s; display: inline-block;">
+        Explore My Projects
+      </a>
+    </div>
+
+    <div class="home-container">
+      <div class="home-text">
+        <h1>Hello! I'm Jacquilyn Ligon. Welcome to my Personal Website.</h1>
+        <p>I am an aspiring IT professional with a strong foundation in web development, software testing, and information technology solutions. I am currently completing my Bachelor of Science in Information Technology at STI College Cubao.</p><br>
+        <p>This website serves as a portfolio to showcase my skills, academic background, and project experience. My goal is to contribute to the IT industry by developing efficient, user-friendly, and innovative solutions while continuously expanding my knowledge and expertise.</p><br>
+        <p>Feel free to explore the different sections of my website to learn more about me, my skills, and how to get in touch.<br><br>Thank you for visiting!</p>
+        <a 
+           href="assets/JACQUILYN_LIGON_CV (2).pdf" 
+           download 
+           class="resume-btn desktop-resume-btn"
+        >
+          View My Resume
+        </a>
+      </div>
+      <div class="home-image">
+        <img src="assets/me.jfif" alt="Profile" />
+      </div>
+    </div>
+
 
             <div class="skills-list">
             <strong>MY TECHNICAL SKILLS:</strong>
